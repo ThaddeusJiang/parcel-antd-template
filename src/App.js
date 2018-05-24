@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import styles from './App.less'
 
-// import logo from './logo.svg'
+import logo from './logo.svg'
 /**
  * App
  */
@@ -11,7 +11,7 @@ export default class App extends Component {
     return (
       <div className={styles.App}>
         <header className={styles.header}>
-          {/* <img src={logo} className={styles.logo} alt="logo" /> */}
+          <img src={logo} className={styles.logo} alt="logo" />
           <h1 className={styles.title}>Welcome to React</h1>
         </header>
         <p className={styles.intro}>

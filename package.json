@@ -1,7 +1,7 @@
 {
-  "name": "parcel-react-starter",
+  "name": "parcel-antd-template",
   "version": "0.2.0",
-  "description": "a template for react spa builded by parcel",
+  "description": "a react spa template by parcel and antd.",
   "scripts": {
     "start": "parcel public/index.html --open",
     "clean": "rm -rf .cache/ dist/ build/",
@@ -16,7 +16,7 @@
     "lint-staged:js": "eslint --ext .js",
     "precommit": "npm run test && npm run lint-staged"
   },
-  "repository": "https://github.com/ThaddeusJiang/parcel-react-starter.git",
+  "repository": "https://github.com/ThaddeusJiang/parcel-antd-template.git",
   "author": "Jifa Jiang <thaddeusjiang@gmail.com>",
   "license": "MIT",
   "devDependencies": {

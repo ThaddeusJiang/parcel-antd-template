@@ -1,11 +1,9 @@
+// App 外壳
 import React, { Component } from 'react'
-
 import styles from './App.less'
 
 import logo from './logo.svg'
-/**
- * App
- */
+
 export default class App extends Component {
   render() {
     return (

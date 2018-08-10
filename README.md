@@ -1,18 +1,21 @@
-# Parcel React Starter
+# Parcel AntD Starter
 [![Build Status](https://travis-ci.org/ThaddeusJiang/parcel-react-starter.svg?branch=master)](https://travis-ci.org/ThaddeusJiang/parcel-react-starter)
 [![codecov](https://codecov.io/gh/ThaddeusJiang/parcel-react-starter/branch/master/graph/badge.svg)](https://codecov.io/gh/ThaddeusJiang/parcel-react-starter)
 
-a react spa template with parcel
+a react spa template with parcel and antd.
+
+## Feature
+- Parcel
+- Ant Design
+- Test & CI
+- Code Format
+
 
 ## Getting started
 ```
+// Install
 yarn
 
-// start
-yarn start
-```
-
-```
 // Starts the development server.
 yarn start
 
@@ -21,37 +24,7 @@ yarn build
 
 // Starts the test runner.
 yarn test
-
-// Generates document.
-yarn doc
 ```
 
-## File Structure 
-```
-.
-├── Jenkinsfile
-├── LICENSE
-├── README.md
-├── package.json
-├── public
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── manifest.json
-│   └── static
-│       └── iconfont
-│           └── iconfont.js
-├── scripts
-│   ├── deliver.sh
-│   ├── kill.sh
-│   └── test.sh
-├── src
-│   ├── App.js
-│   ├── App.less
-│   ├── App.test.js
-│   ├── index.js
-│   ├── index.less
-│   └── logo.svg
-├── test
-│   └── setupTests.js
-└── yarn.lock
-```
+## File Structure
+整理中

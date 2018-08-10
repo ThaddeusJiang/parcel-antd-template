@@ -1,20 +1,20 @@
 {
   "name": "parcel-react-starter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "a template for react spa builded by parcel",
   "scripts": {
-    "start": "cross-env NODE_ENV=development parcel public/index.html --open",
-    "build": "cross-env NODE_ENV=production parcel build public/index.html -d build --no-cache --public-url /app/",
+    "start": "parcel public/index.html --open",
+    "clean": "rm -rf .cache/ dist/ build/",
+    "build": "cross-env NODE_ENV=production parcel build public/index.html -d build --public-url /app/",
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "test:coverage": "jest --coverage",
-    "doc": "esdoc && open ./docs/index.html",
     "lint": "eslint --ext .js src mock test && npm run lint:style",
     "lint:fix": "eslint --fix --ext .js src mock test && npm run lint:style",
     "lint:style": "stylelint \"src/**/*.less\" --syntax less",
     "lint-staged": "lint-staged",
     "lint-staged:js": "eslint --ext .js",
-    "precommit": "npm run lint-staged"
+    "precommit": "npm run test && npm run lint-staged"
   },
   "repository": "https://github.com/ThaddeusJiang/parcel-react-starter.git",
   "author": "Jifa Jiang <thaddeusjiang@gmail.com>",
@@ -34,10 +34,6 @@
     "cross-env": "^5.1.4",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "esdoc": "^1.1.0",
-    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
-    "esdoc-jsx-plugin": "^1.0.0",
-    "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-compat": "^2.2.0",
@@ -47,12 +43,12 @@
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.1.4",
+    "jest-junit": "^5.0.0",
     "less": "^2.7.3",
     "lint-staged": "^6.1.0",
-    "parcel-bundler": "^1.8.1",
+    "parcel-bundler": "^1.9.7",
     "postcss-modules": "^1.1.0",
     "react-test-renderer": "^16.2.0",
-    "regenerator-runtime": "^0.11.1",
     "sinon": "^5.0.7",
     "stylelint": "^8.4.0",
     "stylelint-config-standard": "^18.0.0"
@@ -62,23 +58,16 @@
     "axios": "^0.17.1",
     "babel-polyfill": "^6.26.0",
     "classname": "^0.0.0",
-    "iconfont-plus": "^0.0.1",
     "lodash": "^4.17.5",
     "moment": "^2.20.1",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-intl": "^2.4.0",
     "react-router-dom": "^4.2.2",
-    "sweetalert": "^2.1.0"
-  },
-  "peerDependencies": {
-    "immutable": "^3.7.4",
-    "prop-types": "15.5.4"
+    "url-search-params": "^1.0.2"
   },
   "jest": {
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
     "setupTestFrameworkScriptFile": "./test/setupTests.js",
     "modulePaths": [
       "<rootDir>/src",
@@ -95,7 +84,12 @@
     "globals": {
       "NODE_ENV": "test"
     },
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
     "verbose": true,
+    "testURL": "http://localhost/",
     "transform": {
       "^.+\\.js?$": "babel-jest",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "./test/fileTransformer.js"

@@ -6,6 +6,7 @@
 # testing
 **__snapshots__*
 /coverage
+junit.xml
 
 # production
 .cache
@@ -15,9 +16,6 @@
 # dotenv environment variables file
 .env
 
-# document
-/docs
-
 # misc
 .DS_Store
 .env.local
@@ -25,6 +23,7 @@
 .env.test.local
 .env.production.local
 
+yarn.lock
 package-lock.json
 npm-debug.log*
 yarn-debug.log*

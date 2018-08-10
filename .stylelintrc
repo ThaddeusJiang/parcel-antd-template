@@ -21,6 +21,7 @@
     "selector-pseudo-element-colon-notation": null,
     "unit-no-unknown": null,
     "no-descending-specificity": null,
+    "at-rule-no-unknown": null,
     "value-list-max-empty-lines": null
   }
 }
